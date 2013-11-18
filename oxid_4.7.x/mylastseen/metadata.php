@@ -11,10 +11,14 @@ $aModule = array(
     'email'       => 'info@zunderweb.de',
     'author'      => 'Zunderweb',
     'extend'      => array(
-        'alist' => 'mylastseen/mylastseen',
-        'start' => 'mylastseen/mylastseen',
+        'details' => 'mylastseen/controllers/mylastseen',
+        'alist' => 'mylastseen/controllers/mylastseen',
+        'start' => 'mylastseen/controllers/mylastseen',
     ),
     'blocks' => array(
         array('template' => 'layout/sidebar.tpl', 'block'=>'sidebar_boxproducts', 'file'=>'out/blocks/mylastseen.tpl'),
+    ),
+    'settings' => array(
+        array('group' => 'mls_settings', 'name' => 'iMlsNumberOfHistoryArticles', 'type' => 'str',  'value' => '4'),
     ),
 );
